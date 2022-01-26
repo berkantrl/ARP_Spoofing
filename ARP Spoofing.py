@@ -71,7 +71,7 @@ if __name__=='__main__':
     print('[*] Resolving Target Addresses...', sys.stdout.flush())
     
     try:
-        MACs = list(map(lambda x: PreAttack(x,args.interface).get_MAC_address(), targets))
+        MACs = map(lambda x: PreAttack(x,args.interface).get_MAC_address(), targets)
         print ('DONE')
     except Exception:
         print('FAİL \n[!] Failed to resolve Target Address')
